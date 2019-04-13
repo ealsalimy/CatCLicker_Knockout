@@ -1,11 +1,8 @@
-var appViewModel = function () {
+var cat = function () {
   this.nicknames = ko.observableArray([{nn:'Cuty'},{nn:'The cat'},{nn:'Tabtab'},{nn:'Mr. fluf'}]);
   this.clickCount = ko.observable(0);
   this.name = ko.observable('Tabby');
   this.imgSrc = ko.observable('https://www.sonomamag.com/wp-content/uploads/2018/05/shutterstock_352176329.jpg');
-  this.clickIncrement = function () {
-    this.clickCount(this.clickCount()+1);
-  };
   this.level = ko.computed(function(){
     if(this.clickCount()<=10){
       return 'Newborn';
@@ -16,6 +13,15 @@ var appViewModel = function () {
       return 'Teen';
     }
   }, this);
+
+
+};
+
+var appViewModel = function () {
+  this.currentCat = ko.observable(new cat());
+  this.clickIncrement = function () {
+    this.currentCat().clickCount(this.currentCat().clickCount()+1);
+  };
 
 };
 ko.applyBindings(new appViewModel());
