@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cat Clicker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel=stylesheet  href="css/styles.css">
+</head>
+<body>
+  <div id='cat_box'>
+  <h2 data-bind="text: name"></h2>
+  <h3 data-bind='text: level'></h3>
+  <div data-bind="text: clickCount"></div>
+  <img id="cat_img" src="" alt="cute cat" data-bind="click: clickIncrement, attr: {src: imgSrc}">
+  </div>
+<footer>By Ebtihal</footer>
+<script  src='js/lib/knockout-3.5.0.js'></script>
+<script src="js/app.js"></script>
+</body>
+</html>
