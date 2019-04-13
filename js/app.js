@@ -1,4 +1,5 @@
 var appViewModel = function () {
+  this.nicknames = ko.observableArray([{nn:'Cuty'},{nn:'The cat'},{nn:'Tabtab'},{nn:'Mr. fluf'}]);
   this.clickCount = ko.observable(0);
   this.name = ko.observable('Tabby');
   this.imgSrc = ko.observable('https://www.sonomamag.com/wp-content/uploads/2018/05/shutterstock_352176329.jpg');
